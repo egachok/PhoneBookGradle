@@ -5,8 +5,8 @@ import org.dmitrydunai.contacts.Contact;
 import java.util.List;
 
 public interface ContactService {
-    List getAll();
+    List<Contact> getAll();
     void removeContact(int index);
     void addContact(Contact contact);
-    List searchContact(String search);
+    List<Contact> searchContact(String search);
 }
