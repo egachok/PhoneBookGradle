@@ -12,11 +12,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ContactView contactView = new ContactView(scanner);
-//        ContactService contactService = new ByteSerialization();
+        ContactService contactService = new ByteSerialization();
 //        ContactService contactService = new CSVSerialization();
 //        ContactService contactService = new JSonSerialisation();
 //        ContactService contactService = new XmlSerialization();
-        ContactService contactService = new InMemoryContactService();
+//        ContactService contactService = new InMemoryContactService();
         List<Object> menuActions = Arrays.asList(
                 new ShowAllContactMenuAction(contactService, contactView),
                 new AddContactMenuAction(contactService, contactView),

@@ -5,4 +5,3 @@ build/
 *.iml
 gradlew
 gradlew.bat
-*.xml
