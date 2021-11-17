@@ -17,7 +17,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class XmlSerialization implements ContactService {
+public abstract class XmlSerialization implements ContactService {
 
     private final File file = new File("Contacts.xml");
     List<Contact> contacts = new ArrayList<>();

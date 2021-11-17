@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class JSonSerialisation implements ContactService{
+public abstract class JSonSerialisation implements ContactService{
 
     private final File file = new File("Contacts.json");
     List<Contact> contacts = new ArrayList<>();

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CSVSerialization implements ContactService{
+public abstract class CSVSerialization implements ContactService{
     private final File file = new File("Contacts.csv");
     List<Contact> contacts = new ArrayList<>();
 
@@ -46,7 +46,7 @@ public class CSVSerialization implements ContactService{
             contacts = null;
             try (FileReader is = new FileReader(file)) {
                 BufferedReader bufferedReader = new BufferedReader(is);
-                contacts = (ArrayList<Contact>) bufferedReader.lines()
+                contacts = bufferedReader.lines()
                         .map(l -> l.split(","))
                         .map(a -> new Contact(a[0], a[1]))
                         .collect(Collectors.toList());

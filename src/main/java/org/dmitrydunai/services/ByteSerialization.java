@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ByteSerialization implements ContactService {
+public abstract class ByteSerialization implements ContactService {
     private final File file = new File("Contacts.obj");
     List<Contact> contacts = new ArrayList<>();
 

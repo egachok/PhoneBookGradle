@@ -5,7 +5,7 @@ import org.dmitrydunai.contacts.Contact;
 import java.util.List;
 import java.util.ArrayList;
 
-public class InMemoryContactService implements ContactService{
+public abstract class InMemoryContactService implements ContactService{
 
     List<Contact> contacts = new ArrayList<>();
 

@@ -5,13 +5,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
-import java.io.Serializable;
-
+@AllArgsConstructor
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Accessors(chain = true)
-public class Contact implements Serializable {
+public class Contact{
     private String name;
-    private String phone;
+    private Long id;
+    private ContactType contactType;
+    private String value;
+
+    public Contact(String name, String value) {
+        this.name = name;
+        this.value = value;
+    }
 }

@@ -25,4 +25,5 @@ dependencies {
 group = 'org.dmitrydunai'
 version = '1.0.0'
 description = 'PhoneBook'
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
